@@ -26,35 +26,35 @@
 
             <table>
                 <tr>
-                    <td><button class="botao" onclick="clean()">C</button></td>
-                    <td><button class="botao" onclick="back()">&lt;</button></td>
-                    <td><button class="botao" onclick="insert('/')">&frasl;</button></td>
-                    <td><button class="botao" onclick="insert('*')">&times;</button></td>
+                    <td><button id="c" class="botao" onclick="clean()">C</button></td>
+                    <td><button id="l" class="botao" onclick="back()">&lt;</button></td>
+                    <td><button id="d" class="botao" onclick="insert('/')">&frasl;</button></td>
+                    <td><button id="m" class="botao" onclick="insert('*')">&times;</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="botao" onclick="insert('7')">7</button></td>
-                    <td><button class="botao" onclick="insert('8')">8</button></td>
-                    <td><button class="botao" onclick="insert('9')">9</button></td>
-                    <td><button class="botao" onclick="insert('-')">&minus;</button></td>
+                    <td><button id="7" class="botao" onclick="insert('7')">7</button></td>
+                    <td><button id="8" class="botao" onclick="insert('8')">8</button></td>
+                    <td><button id="9" class="botao" onclick="insert('9')">9</button></td>
+                    <td><button id="s" class="botao" onclick="insert('-')">&minus;</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="botao" onclick="insert('4')">4</button></td>
-                    <td><button class="botao" onclick="insert('5')">5</button></td>
-                    <td><button class="botao" onclick="insert('6')">6</button></td>
-                    <td><button class="botao" onclick="insert('+')">+</button></td>
+                    <td><button id="4" class="botao" onclick="insert('4')">4</button></td>
+                    <td><button id="5" class="botao" onclick="insert('5')">5</button></td>
+                    <td><button id="6" class="botao" onclick="insert('6')">6</button></td>
+                    <td><button id="_" class="botao" onclick="insert('+')">+</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="botao" onclick="insert('1')">1</button></td>
-                    <td><button class="botao" onclick="insert('2')">2</button></td>
-                    <td><button class="botao" onclick="insert('3')">3</button></td>
-                    <td rowspan="2"><button class="botao" style="height:106px;" onclick="calcular()">=</button></td>
+                    <td><button id="1" class="botao" onclick="insert('1')">1</button></td>
+                    <td><button id="2" class="botao" onclick="insert('2')">2</button></td>
+                    <td><button id="3" class="botao" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button id="r" class="botao" style="height:106px;" onclick="calcular()">=</button></td>
                 </tr>
 
                 <tr>
-                    <td colspan="2"><button class="botao" style="width:106px;" onclick="insert('0')">0</button></td>
+                    <td colspan="2"><button id="0" class="botao" style="width:106px;" onclick="insert('0')">0</button></td>
                     <td><button class="botao" onclick="insert('.')">&sdot;</button></td>
 
                 </tr>
@@ -63,6 +63,45 @@
     </div>
 
 
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key == 1) {
+                document.getElementById("1").click();
+            } else if (e.key == 2) {
+                document.getElementById("2").click();
+            } else if (e.key == 3) {
+                document.getElementById("3").click();
+            } else if (e.key == 4) {
+                document.getElementById("4").click();
+            } else if (e.key == 5) {
+                document.getElementById("5").click();
+            } else if (e.key == 6) {
+                document.getElementById("6").click();
+            } else if (e.key == 7) {
+                document.getElementById("7").click();
+            } else if (e.key == 8) {
+                document.getElementById("8").click();
+            } else if (e.key == 9) {
+                document.getElementById("9").click();
+            } else if (e.key == 0) {
+                document.getElementById("0").click();
+            } else if (e.key == "c") {
+                document.getElementById("c").click();
+            } else if (e.key == "l") {
+                document.getElementById("l").click();
+            } else if (e.key == "d") {
+                document.getElementById("d").click();
+            } else if (e.key == "m") {
+                document.getElementById("m").click();
+            } else if (e.key == "s") {
+                document.getElementById("s").click();
+            } else if (e.key == "_") {
+                document.getElementById("_").click();
+            } else if (e.key == "r") {
+                document.getElementById("r").click();
+            }
+        });
+    </script>
 </body>
 
 </html>
